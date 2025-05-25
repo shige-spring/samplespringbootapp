@@ -6,6 +6,10 @@ services:
       context: .
     ports:
       - "8081:8080"
+    volumes:
+      - ./src:/app/src
+      - ./build:/app/build
+      - gradle_cache:/home/gradle/.gradle
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/mydb
       - SPRING_DATASOURCE_USERNAME=myuser
@@ -26,3 +30,4 @@ services:
 
 volumes:
   pgdata:
+  gradle_cache:

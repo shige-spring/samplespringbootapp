@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Interactive Page</title>
+    <script>
+        function changeMessage() {
+            var messages = ["Hello, Interactive World!", "Button Clicked!", "Welcome to Thymeleaf!", "Spring Boot Rocks!"];
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[randomIndex];
+        }
+    </script>
+</head>
+<body>
+    <h1 id="message">Hello, World!</h1>
+    <button onclick="changeMessage()">Click Me!</button>
+</body>
+</html> 

@@ -27,5 +27,6 @@ RUN chmod +x gradlew
 # ビルド
 RUN ./gradlew build -x test
 
-# アプリ起動
-CMD ["java", "-jar", "build/libs/samplespringbootapp-0.0.1-SNAPSHOT.jar"]
+# アプリ起動 (開発時)
+CMD ["./gradlew", "bootRun"]
+# CMD ["java", "-jar", "build/libs/samplespringbootapp-0.0.1-SNAPSHOT.jar"] # 本番用はこちらを残すことも検討
