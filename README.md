@@ -26,7 +26,3 @@
 
 - Spring Boot
 - Thymeleaf
-
-## 著者
-
-- 作者名 (メールアドレス)
